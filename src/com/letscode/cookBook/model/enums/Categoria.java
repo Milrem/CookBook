@@ -1,4 +1,4 @@
-package com.letscode.cookBook.enums;
+package com.letscode.cookBook.model.enums;
 
 public enum Categoria {
     BOLOS_E_TORTAS_DOCES,

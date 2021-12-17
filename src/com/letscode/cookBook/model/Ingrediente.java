@@ -1,6 +1,6 @@
-package com.letscode.cookBook.domain;
+package com.letscode.cookBook.model;
 
-import com.letscode.cookBook.enums.TipoMedida;
+import com.letscode.cookBook.model.enums.TipoMedida;
 
 public class Ingrediente {
     private final String nome;
@@ -14,34 +14,40 @@ public class Ingrediente {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public double getQuantidade() {
-        return quantidade;
+        return this.quantidade;
     }
 
     public TipoMedida getTipoQuantidade() {
-        return tipoQuantidade;
+        return this.tipoQuantidade;
     }
 
     @Override
     public String toString() {
-        return String.format("%.3f %s %s", quantidade, tipoQuantidade, nome);
+        return String.format("%.3f %s de %s",
+                this.quantidade, this.tipoQuantidade, this.nome);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Ingrediente that = (Ingrediente) o;
 
-        return nome.equals(that.nome);
+        return this.nome.equals(that.nome);
     }
 
     @Override
     public int hashCode() {
-        return nome.hashCode();
+        return this.nome.hashCode();
     }
 }
