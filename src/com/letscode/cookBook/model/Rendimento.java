@@ -1,6 +1,6 @@
-package com.letscode.cookBook.domain;
+package com.letscode.cookBook.model;
 
-import com.letscode.cookBook.enums.TipoRendimento;
+import com.letscode.cookBook.model.enums.TipoRendimento;
 
 public class Rendimento {
     private final int quantidade;
@@ -12,15 +12,15 @@ public class Rendimento {
     }
 
     public int getQuantidade() {
-        return quantidade;
+        return this.quantidade;
     }
 
     public TipoRendimento getTipoRendimento() {
-        return tipoRendimento;
+        return this.tipoRendimento;
     }
 
     @Override
     public String toString() {
-        return String.format("%2d %s", quantidade, tipoRendimento);
+        return String.format("%2d %s", this.quantidade, this.tipoRendimento);
     }
 }

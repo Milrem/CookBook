@@ -1,4 +1,4 @@
-package com.letscode.cookBook.enums;
+package com.letscode.cookBook.model.enums;
 
 public enum TipoRendimento {
     UNIDADES,
